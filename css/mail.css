@@ -2,25 +2,58 @@
 	box-sizing: border-box;
   margin: 0;
 }
-#sidebar{
+nav{
   background: #F3F3F3;
-  height: 100%;
   width: 300px;
   margin: 0;
-  position: fixed;
+  position: absolute;
+	top: 50px;
+	bottom: 0;
 }
-.sidebar_item{
+.nav_item{
   height: 40px;
   line-height: 40px;
   text-align: center;
   cursor: pointer;
 }
-.sidebar_item:nth-child(2n){
+.nav_item:nth-child(2n){
   background: #E0F1F8
 }
-.sidebar_item:nth-child(2n+1){
+.nav_item:nth-child(2n+1){
   background: #CFECF4
 }
-.sidebar_item:hover{
-  font-size: 20px;
+.nav_item:first-child{
+  background: #F3F3F3
+}
+.nav_item:hover{
+	background: #56B0E4;
+	color: white;
+}
+#div_pesquisa{
+	height: 50px;
+	background: #3690C4;
+	padding: 0 40px;
+	position: relative;
+}
+input{
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+		height: 30px;
+		width: 260px;
+		padding: 10px;
+		border-radius: 1px;
+		border: none;
+}
+header{
+	background: #F3F3F3;
+	height: 40px;
+	padding-left: 300px;
+}
+h1{
+	display: inline-block;
+	font-size: 25px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
 }
