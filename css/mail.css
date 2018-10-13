@@ -1,0 +1,26 @@
+*{
+	box-sizing: border-box;
+  margin: 0;
+}
+#sidebar{
+  background: #F3F3F3;
+  height: 100%;
+  width: 300px;
+  margin: 0;
+  position: fixed;
+}
+.sidebar_item{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.sidebar_item:nth-child(2n){
+  background: #E0F1F8
+}
+.sidebar_item:nth-child(2n+1){
+  background: #CFECF4
+}
+.sidebar_item:hover{
+  font-size: 20px;
+}
