@@ -1,10 +1,11 @@
 *{
 	box-sizing: border-box;
 	margin: 0;
+	white-space: nowrap;
 }
 html, body{
 	height: 100%;
-	overflow-y: hidden;
+	overflow: hidden;
 }
 nav{
   background: #F3F3F3;
@@ -36,19 +37,17 @@ nav{
 }
 #div_pesquisa{
 	height: 50px;
+	line-height: 50px;
 	background: #3690C4;
 	padding: 0 40px;
-	position: relative;
+	text-align: right;
 }
 input{
-	  position: absolute;
-	  top: 50%;
-	  transform: translateY(-50%);
-		height: 30px;
-		width: 260px;
-		padding: 10px;
-		border-radius: 1px;
-		border: none;
+	height: 30px;
+	width: 260px;
+	padding: 10px;
+	border-radius: 1px;
+	border: none;
 }
 header{
 	background: #F3F3F3;
@@ -60,4 +59,36 @@ h1{
 	height: 40px;
 	line-height: 40px;
 	padding-left: 20px;
+}
+.mail{
+	padding: 10px;
+	border-top: 1px solid #F3F3F3;
+	border-bottom: 1px solid transparent;
+	overflow: hidden;
+	font-size: 15px;
+}
+.remetente{
+	width: 220px;
+	max-width: 35%;
+	display: inline-block;
+	overflow: hidden;
+}
+.assunto{
+	width: 180px;
+	max-width: 20%;
+	display: inline-block;
+	overflow: hidden;
+}
+.conteudo{
+	max-width: 45%;
+	display: inline-block;
+	overflow: hidden;
+}
+.mail:hover{
+	cursor: pointer;
+	border-top: 1px solid #3690C4;
+	border-bottom: 1px solid #3690C4;
+}
+#mails{
+	overflow-y: auto;
 }
