@@ -9,7 +9,7 @@ html, body{
 }
 nav{
   background: #F3F3F3;
-  width: 300px;
+  width: 260px;
   margin: 0;
   max-width: 100%;
   float: left;
@@ -20,7 +20,7 @@ nav{
   line-height: 40px;
   text-align: center;
   cursor: pointer;
-  font-size: large;
+  font-size: 16px;
 }
 .nav_item:nth-child(2n){
   background: #E0F1F8
@@ -39,7 +39,7 @@ nav{
 	background: #56B0E4 !important;
 	border-radius: 0 10px 10px 0;
 	color: white;
-	width: 310px;
+	width: 270px;
 	cursor: default;
 }
 #div_pesquisa{
@@ -83,7 +83,6 @@ h1{
 	overflow: hidden;
 }
 .conteudo{
-	width: 600px;
 	max-width: 100%;
 	display: inline-block;
 	overflow: hidden;

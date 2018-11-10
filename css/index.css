@@ -1,11 +1,12 @@
 *{
 	box-sizing: border-box;
+	margin: 0;
 }
 html, body, .flex-container{
 	height: 100%
 }
 body{
-	/* background: #444; */
+	background: #eee;
 }
 input{
 	display: block;
@@ -17,20 +18,26 @@ input{
 	height: 35px;
 }
 
-input[type=submit]{
-	background: #AFA;
-	color: #666;
+input[type=button]{
+	color: white;
+    background-color: #428bca;
+    border-color: #357ebd;
 	margin-top: 30px;
-	padding: 8px;
+	padding: 12px;
+	height: auto;
+	cursor: pointer;
+	border-radius: 6px;
+	outline: none;
 }
-
-form{
-	padding: 20px;
-	border: 1px solid #AAA;
+input[type=button]:hover{
+	background: #2069a8;
+}
+#formulario{
+	max-width: 380px;
+	padding: 35px;
 	margin: 0 auto;
-	border-radius: 5px;
-	width: 300px;
-	background: #CCC;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.1); 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -38,4 +45,8 @@ form{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+h1{
+	margin-bottom: 30px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
