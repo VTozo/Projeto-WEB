@@ -7,6 +7,9 @@ html, body{
 	height: 100%;
 	overflow: hidden;
 }
+body{
+	padding-bottom: 50px;
+}
 nav{
   background: #F3F3F3;
   width: 260px;
@@ -14,6 +17,17 @@ nav{
   max-width: 100%;
   float: left;
   height: 100%;
+}
+a{
+	text-decoration: none;
+	color: initial;
+}
+input{
+	height: 30px;
+	width: 260px;
+	padding: 10px;
+	border-radius: 1px;
+	border: none;
 }
 .nav_item{
   height: 40px;
@@ -49,20 +63,6 @@ nav{
 	padding: 0 40px;
 	text-align: right;
 }
-input{
-	height: 30px;
-	width: 260px;
-	padding: 10px;
-	border-radius: 1px;
-	border: none;
-}
-h1{
-	display: inline-block;
-	font-size: 25px;
-	height: 40px;
-	line-height: 40px;
-	padding-left: 20px;
-}
 .mail{
 	padding: 10px;
 	border-top: 1px solid #F3F3F3;
@@ -94,5 +94,6 @@ h1{
 }
 #mails{
 	overflow-y: auto;
+	height: 100%;
 	padding: 15px;
 }
