@@ -2,8 +2,37 @@
 <html>
 <head>
 	<title>Nova Mensagem</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/mail.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<div id="div_pesquisa">
+		<img src="../imagens/mail.svg" id="logo">
+		<img src="../imagens/menu.svg" class="hidden" id="menu">
+		<span id='nome'>YourMail</span>
+		<a href="mail.html">
+			<input type="button" value="&ltri; Voltar" id="voltar">	
+		</a>
+	</div>
+	
+	<nav>
+		<div class='nav_item ativo'>+ Nova Mensagem</div>
+		<div class='nav_item'>Caixa de Entrada</div>
+		<div class='nav_item'>Favoritos</div>
+		<div class='nav_item'>Lixo Eletrônico</div>
+		<div class='nav_item'>Rascunho</div>
+		<div class='nav_item'>Itens Enviados</div>
+		<div class='nav_item'>Itens Excluídos</div>
+		<div class='nav_item'>Arquivo Morto</div>
+	</nav>
 
+	<section id="nova_mensagem">
+		<label><div>Para: </div><input type="mail"></label>
+		<label><div>Cc: </div><input type="mail"></label>
+		<label><div>Assunto: </div><input type="text"></label>
+		<label><div>Texto: </div><textarea></textarea></label>
+		<input type="button" value="Enviar">
+	</section>
 </body>
 </html>
