@@ -7,13 +7,15 @@
 	<link rel="stylesheet" href="../css/mail.css">
 	<script src="../js/jquery.js"></script>
 	<script src="../js/nav.js"></script>
+	<script src="../js/inbox.js"></script>
 </head>
 <body>
 	<div id="div_pesquisa">
 		<img src="../imagens/mail.svg" id="logo">
 		<img src="../imagens/menu.svg" class="hidden" id="menu">
 		<span id='nome'>YourMail</span>
-		<input type="text" placeholder="Pesquisar">	
+		<input type="text" placeholder="Pesquisar">
+
 	</div>
 	
 	<nav>
@@ -74,6 +76,15 @@
 			<div class="assunto">Ultimo teste</div>
 			<div class="conteudo">Ultimo conteúdo do email</div>
 		</div>
+
+	</section>
+
+	<section id="mail" class="hidden">
+
+		<input type="button" value="Voltar" id="voltar_mails">
+		<h1 class="assunto"></h1>
+		<div class="remetente"></div>
+		<div class="conteudo"></div>
 
 	</section>
 </body>

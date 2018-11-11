@@ -8,7 +8,7 @@ html, body{
 	overflow: hidden;
 }
 body{
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 }
 nav{
   background: #F3F3F3;
@@ -85,19 +85,19 @@ label{
 	overflow: hidden;
 	font-size: 15px;
 }
-.remetente{
+#mails .remetente{
 	width: 220px;
 	max-width: 35%;
 	display: inline-block;
 	overflow: hidden;
 }
-.assunto{
+#mails .assunto{
 	width: 180px;
 	max-width: 20%;
 	display: inline-block;
 	overflow: hidden;
 }
-.conteudo{
+#mails .conteudo{
 	max-width: 100%;
 	display: inline-block;
 	overflow: hidden;
@@ -107,7 +107,7 @@ label{
 	border-top: 1px solid #3690C4;
 	border-bottom: 1px solid #3690C4;
 }
-#mails{
+#mails, #mail{
 	overflow-y: auto;
 	height: 100%;
 	padding: 15px 35px;
@@ -136,7 +136,7 @@ textarea{
 	height: 400px;
 	border: 1px solid #888; 
 }
-input[type=button]{
+#nova_mensagem input[type=button]{
 	color: white;
 	background-color: #428bca;
 	border-color: #357ebd;
@@ -150,7 +150,7 @@ input[type=button]{
 	max-width: 700px;
 }
 
-input[type=button]:hover{
+#nova_mensagem input[type=button]:hover{
 	background: #2069a8;
 }
 
@@ -170,6 +170,31 @@ input[type=button]:hover{
 	text-align: left;
 }
 
+#mail .assunto{
+	font-size: 30px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#mail .conteudo{
+	margin: 30px;
+	white-space: initial;
+	max-width: 100%;
+	width: 700px;
+}
+#mail input[type=button]{
+	color: white;
+	background-color: #428bca;
+	border-color: #357ebd;
+	margin-bottom: 30px;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 6px;
+	outline: none;
+	width: 100px;
+}
+#mail input[type=button]:hover{
+	background: #2069a8;
+}
 @media (max-width: 600px){
 	#div_pesquisa{
 		height: 100px;
@@ -189,14 +214,17 @@ input[type=button]:hover{
 	.nav_item{
 		width: 0;
 	}
-	#mails, #nova_mensagem{
-		padding: 3px 3px 100px 3px;
+	#mails, #nova_mensagem, #mail{
+		padding: 5px 5px 100px 5px;
 	}
-	.assunto, .remetente, .conteudo{
+	#mails .assunto, #mails .remetente, #mails .conteudo{
 		display: block;
 		max-width: 100%;
 	}
 	#menu{
 		display: initial;
+	}
+	#mail .conteudo{
+		margin: 10px;
 	}
 }
