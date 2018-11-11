@@ -56,6 +56,7 @@ label{
   text-align: center;
   cursor: pointer;
   font-size: 16px;
+  overflow: hidden;
 }
 .nav_item:nth-child(2n){
   background: #E0F1F8
@@ -187,7 +188,6 @@ input[type=button]:hover{
 	}
 	.nav_item{
 		width: 0;
-		overflow: hidden;
 	}
 	#mails, #nova_mensagem{
 		padding: 3px 3px 100px 3px;
