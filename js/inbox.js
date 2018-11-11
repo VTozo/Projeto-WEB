@@ -23,4 +23,9 @@ $(document).ready(function(){
 		$("#mails").fadeIn();
 	});
 
+	$("input[type=search]").on("change paste keyup", function() {
+		$('.mail:contains("'+$(this).val()+'")').show();
+		$('.mail:not(:contains("'+$(this).val()+'"))').hide();
+	});
+
 });
