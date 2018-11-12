@@ -1,9 +1,9 @@
 <?php
 
-	$destinatario = $_email["destinatario"];
-	$copia = $_email["copia"];
-	$resumo = $_email["resumo"];
-	$conteudo= $_email["conteudo"];
+	$destinatario = $_POST["destinatario"];
+	$copia = $_POST["copia"];
+	$resumo = $_POST["resumo"];
+	$conteudo= $_POST["conteudo"];
 
 
 	$xml = new DOMDocument("1.0");

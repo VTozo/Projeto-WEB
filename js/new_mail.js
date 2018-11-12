@@ -14,7 +14,7 @@ $(document).ready(function(){
 function fCriar_email(){
 
 $.ajax({
-	type: "emial",
+	type: "POST",
 	dataType: "JSON",
 	url: "..php/arquivos_enviados.php"
 	async: false,
