@@ -1,9 +1,9 @@
 <?php
 
-<<<<<<< HEAD
+ HEAD
 	$destinatario = $_POST["destinatario"];
 	$copia = $_POST["copia"];
-	$resumo = $_POST["resumo"];
+	$assunto = $_POST["assunto"];
 	$conteudo= $_POST["conteudo"];
 =======
 	$id = uniqid();
@@ -20,7 +20,7 @@
 	$tag_emailEnviado = $xml->createElement("email");
 	$tag_destinatario = $xml->createElement("destinatario", $destinatario);
 	$tag_copia = $xml->createElement("copia", $copia);
-	$tag_resumo = $xml->createElement("assunto", $assunto);
+	$tag_assunto = $xml->createElement("assunto", $assunto);
 	$tag_conteudo = $xml->createElement("conteudo", $conteudo);
 	$tag_id = $xml->createElement("id", $id);
 
