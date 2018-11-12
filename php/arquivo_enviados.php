@@ -24,7 +24,7 @@
 	$tag_emailEnviado->appendChild($tag_destinatario);
 	$xml->appendChild($tag_emailEnviado);
 
-	$xml->save("../arquivos/emailEnviados/mail_".$id.".xml");
+	$xml->save("../arquivos/emails/email_".$id.".xml");
 
 	echo "email enviado"
 
