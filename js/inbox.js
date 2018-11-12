@@ -1,15 +1,16 @@
-// Esse arquivo vai ser pra receber os emails
-// por Ajax e listar na página de emails,
-// dentro da div id='mails' no formato:
-//
-// <div class="mail">
-// 	   <div class="remetente"></div>
-// 	   <div class="assunto"></div>
-//     <div class="conteudo"></div>
-// </div>
 
 $(document).ready(function(){
+	// Listagem de emails
+	$.ajax({
+		url: "../php/listar_mensagens.php",
+		async: false,
+		success: function(result){
+        	$("#mails").html(result);
+    	}
+	});
+	
 
+	// Visualização de email
 	$(".mail").click(function(){
 		$("#mails").fadeOut();
 		$("#mail .assunto").html($(this).children(".assunto").html());
@@ -23,6 +24,7 @@ $(document).ready(function(){
 		$("#mails").fadeIn();
 	});
 
+	// Barra de pesquisa
 	$("input[type=search]").on("change paste keyup", function() {
 		$('.mail:contains("'+$(this).val()+'")').show();
 		$('.mail:not(:contains("'+$(this).val()+'"))').hide();

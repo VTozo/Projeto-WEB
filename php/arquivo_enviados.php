@@ -10,7 +10,7 @@
 
 
 	$xml = new DOMDocument("1.0");
-	$tag_emailEnviado = $xml->createElement("emailEnviado");
+	$tag_emailEnviado = $xml->createElement("email");
 	$tag_destinatario = $xml->createElement("destinatario", $destinatario);
 	$tag_copia = $xml->createElement("copia", $copia);
 	$tag_resumo = $xml->createElement("assunto", $assunto);

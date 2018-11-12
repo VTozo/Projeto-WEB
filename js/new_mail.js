@@ -16,7 +16,7 @@ function fCriar_email(){
 $.ajax({
 	type: "POST",
 	dataType: "JSON",
-	url: "..php/arquivos_enviados.php"
+	url: "../php/arquivos_enviados.php"
 	async: false,
 	data:{
 		destinatario: $("#destinatario").val(),
