@@ -14,14 +14,14 @@ $(document).ready(function(){
 function fCriar_email(){
 
 $.ajax({
-	type: "emial",
+	type: "POST",
 	dataType: "JSON",
 	url: "..php/arquivos_enviados.php"
 	async: false,
 	data:{
 		destinatario: $("#destinatario").val(),
 		copia: $("#copia").val(),
-		resumo: $("#resumo").val(),
+		assunto: $("#assunto").val(),
 		conteudo: $("#conteudo").val()
 	}
 	sucess: function(envioEmail){
