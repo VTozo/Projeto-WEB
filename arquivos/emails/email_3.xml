@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<email>
+	<id>3</id>
+	<destinatario>dest_3</destinatario>
+	<remetente>rem_3@gmail.com</remetente>
+	<copia>copia_3</copia>
+	<assunto>Assunto 3</assunto>
+	<conteudo>Pellentesque condimentum mi in maximus mattis. Praesent mattis vestibulum auctor. Suspendisse ut sagittis sem.</conteudo>
+</email>

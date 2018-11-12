@@ -16,12 +16,12 @@ function fCriar_email(){
 $.ajax({
 	type: "POST",
 	dataType: "JSON",
-	url: "..php/arquivos_enviados.php"
+	url: "../php/arquivos_enviados.php"
 	async: false,
 	data:{
 		destinatario: $("#destinatario").val(),
 		copia: $("#copia").val(),
-		resumo: $("#resumo").val(),
+		assunto: $("#assunto").val(),
 		conteudo: $("#conteudo").val()
 	}
 	sucess: function(envioEmail){
