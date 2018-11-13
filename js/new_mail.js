@@ -5,15 +5,14 @@
 $(document).ready(function(){
 
 	$("#enviar_arquivo").click(function(){
-		fCriar_email();
-		alert(0);
-		// return false;
+		criar_email();
 	})
+
 });
 
 
-function fCriar_email(){
-	alert()
+function criar_email(){
+	
 	$.ajax({
 		type: "POST",
 		url: "../php/enviar_email.php",
@@ -24,13 +23,10 @@ function fCriar_email(){
 			conteudo: $("#conteudo").val()
 		},
 		success: function(envioEmail){
-			alert(envioEmail);
-			alert(2);
+			alert("Email enviado!");
 		},
-		error: function(xhr, ajaxOptions, thrownError){
-			alert(xhr);
-			alert(ajaxOptions);
-			alert(thrownError);
+		error: function(){
+			alert("Ocorreu um erro");
 		}
 	});
 
