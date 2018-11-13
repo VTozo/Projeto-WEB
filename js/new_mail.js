@@ -18,7 +18,6 @@ function criar_email(){
 		url: "../php/enviar_email.php",
 		data:{
 			destinatario: $("#destinatario").val(),
-			copia: $("#copia").val(),
 			assunto: $("#assunto").val(),
 			conteudo: $("#conteudo").val()
 		},
