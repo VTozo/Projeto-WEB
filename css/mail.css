@@ -57,9 +57,11 @@ label{
   cursor: pointer;
   font-size: 16px;
   overflow: hidden;
+  background-color: #45579B;
 }
 .nav_item:nth-child(2n){
   background: #E0F1F8
+
 }
 .nav_item:nth-child(2n+1){
   background: #CFECF4

@@ -1,4 +1,5 @@
 <?php
+
 	$caminho = "../arquivos/emails/";
 	$diretorio = dir($caminho);
 
