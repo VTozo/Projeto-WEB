@@ -19,7 +19,6 @@ function criar_email(){
 		data:{
 			destinatario: $("#destinatario").val(),
 			assunto: $("#assunto").val(),
-			conteudo: $("#conteudo").val()
 		},
 		success: function(envioEmail){
 			alert("Email enviado!");

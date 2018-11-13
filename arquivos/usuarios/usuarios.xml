@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios>
+	<usuario>
+		<email>filipesouza005@gmail.com</email>
+		<senha>abc</senha>
+	</usuario>
+	<usuario>
+		<email>vlimatozo@gmail.com</email>
+		<senha>abc</senha>
+	</usuario>
+</usuarios>
