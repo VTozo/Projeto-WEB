@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
 
-	$("bEnviar_arquivo").click(function(){
+	$("#bEnviar_arquivo").click(function(){
 		fCriar_email();
 		return false;
 	})
@@ -12,12 +12,11 @@ $(document).ready(function(){
 
 
 function fCriar_email(){
-
+alert();
 $.ajax({
 	type: "POST",
-	dataType: "JSON",
-	url: "../php/arquivos_enviados.php"
-	async: false,
+	dataType: "text",
+	url: "../php/arquivos_enviados.php",
 	data:{
 		destinatario: $("#destinatario").val(),
 		copia: $("#copia").val(),
@@ -25,6 +24,7 @@ $.ajax({
 		conteudo: $("#conteudo").val()
 	}
 	sucess: function(envioEmail){
+		alert(envioEmail);
 	}
 });
 

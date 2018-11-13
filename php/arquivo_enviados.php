@@ -1,20 +1,20 @@
 <?php
 
- HEAD
-	$destinatario = $_POST["destinatario"];
-	$copia = $_POST["copia"];
-	$assunto = $_POST["assunto"];
-	$conteudo= $_POST["conteudo"];
-=======
+ 	if(isset($_POST)) echo "post";;
+	//$destinatario = $_POST["destinatario"];
+	//$copia = $_POST["copia"];
+	//$assunto = $_POST["assunto"];
+	//$conteudo= $_POST["conteudo"];
+
+
+
 	$id = uniqid();
 	// Gera um id único pro email, para dar pra excluir e para guardar em arquivos diferentes
 
-	$destinatario = $_email["destinatario"];
-	$copia = $_email["copia"];
-	$assunto = $_email["assunto"];
-	$conteudo= $_email["conteudo"];
->>>>>>> efb1dcb5b543277746f9cb3a39d72cf9bcfc65ba
-
+	$destinatario = "destinatario1";
+	$copia = "copia1";
+	$assunto = "assunto1";
+	$conteudo = "conteudo1";
 
 	$xml = new DOMDocument("1.0");
 	$tag_emailEnviado = $xml->createElement("email");
