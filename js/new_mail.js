@@ -4,28 +4,34 @@
 
 $(document).ready(function(){
 
-	$("#bEnviar_arquivo").click(function(){
+	$("#enviar_arquivo").click(function(){
 		fCriar_email();
-		return false;
+		alert(0);
+		// return false;
 	})
 });
 
 
 function fCriar_email(){
-alert();
-$.ajax({
-	type: "POST",
-	dataType: "text",
-	url: "../php/arquivos_enviados.php",
-	data:{
-		destinatario: $("#destinatario").val(),
-		copia: $("#copia").val(),
-		assunto: $("#assunto").val(),
-		conteudo: $("#conteudo").val()
-	}
-	sucess: function(envioEmail){
-		alert(envioEmail);
-	}
-});
+	alert()
+	$.ajax({
+		type: "POST",
+		url: "../php/enviar_email.php",
+		data:{
+			destinatario: $("#destinatario").val(),
+			copia: $("#copia").val(),
+			assunto: $("#assunto").val(),
+			conteudo: $("#conteudo").val()
+		},
+		success: function(envioEmail){
+			alert(envioEmail);
+			alert(2);
+		},
+		error: function(xhr, ajaxOptions, thrownError){
+			alert(xhr);
+			alert(ajaxOptions);
+			alert(thrownError);
+		}
+	});
 
 }

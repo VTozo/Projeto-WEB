@@ -1,20 +1,11 @@
 <?php
-
- 	if(isset($_POST)) echo "post";;
-	//$destinatario = $_POST["destinatario"];
-	//$copia = $_POST["copia"];
-	//$assunto = $_POST["assunto"];
-	//$conteudo= $_POST["conteudo"];
-
-
-
 	$id = uniqid();
 	// Gera um id único pro email, para dar pra excluir e para guardar em arquivos diferentes
 
-	$destinatario = "destinatario1";
-	$copia = "copia1";
-	$assunto = "assunto1";
-	$conteudo = "conteudo1";
+	$destinatario = $_POST["destinatario"];
+	$copia        = $_POST["copia"];
+	$assunto      = $_POST["assunto"];
+	$conteudo     = $_POST["conteudo"];
 
 	$xml = new DOMDocument("1.0");
 	$tag_emailEnviado = $xml->createElement("email");
@@ -34,5 +25,4 @@
 	$xml->save("../arquivos/emails/email_".$id.".xml");
 
 	echo "email enviado"
-
 ?>
