@@ -3,7 +3,6 @@ $(document).ready(function(){
 	// Listagem de emails
 	$.ajax({
 		url: "../php/listar_mensagens.php",
-		async: false,
 		success: function(result){
         	$("#mails").html(result);
     	}
@@ -12,33 +11,33 @@ $(document).ready(function(){
 
 	// Visualização de email
 	$(".mail").click(function(){
-		$("#mails").fadeOut();
+		$("#mails").hide();
 		$("#mail .assunto").html($(this).children(".assunto").html());
 		$("#mail .remetente").html($(this).children(".remetente").html());
 		$("#mail .conteudo").html($(this).children(".conteudo").html());
-		$("#mail").fadeIn();
+		$("#mail").show();
 	});
 
 	$("#voltar_mails").click(function(){
-		$("#mail").fadeOut();
-		$("#mails").fadeIn();
+		$("#mail").hide();
+		$("#mails").show();
 	});
 
 	$("#nav_mensagem").click(function(){
 		if(!$(this).hasClass("ativo")){	
-			$("section").fadeOut();
+			$("section").hide();
 			$(".nav_item").removeClass("ativo");
 			$("#nav_mensagem").addClass("ativo");
-			$("#nova_mensagem").fadeIn();
+			$("#nova_mensagem").show();
 		}
 	});
 
 	$("#nav_mails").click(function(){
 		if(!$(this).hasClass("ativo")){	
-			$("section").fadeOut();
+			$("section").hide();
 			$(".nav_item").removeClass("ativo");
 			$("#nav_mails").addClass("ativo");
-			$("#mails").fadeIn();
+			$("#mails").show();
 		}
 	});
 
