@@ -24,6 +24,24 @@ $(document).ready(function(){
 		$("#mails").fadeIn();
 	});
 
+	$("#nav_mensagem").click(function(){
+		if(!$(this).hasClass("ativo")){	
+			$("section").fadeOut();
+			$(".nav_item").removeClass("ativo");
+			$("#nav_mensagem").addClass("ativo");
+			$("#nova_mensagem").fadeIn();
+		}
+	});
+
+	$("#nav_mails").click(function(){
+		if(!$(this).hasClass("ativo")){	
+			$("section").fadeOut();
+			$(".nav_item").removeClass("ativo");
+			$("#nav_mails").addClass("ativo");
+			$("#mails").fadeIn();
+		}
+	});
+
 	// Barra de pesquisa
 	$("input[type=search]").on("change paste keyup", function() {
 		$('.mail:contains("'+$(this).val()+'")').show();

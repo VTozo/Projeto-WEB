@@ -16,7 +16,7 @@ nav{
   margin: 0;
   max-width: 100%;
   float: left;
-  height: 100%;
+  min-height: 100%;
 }
 a{
 	text-decoration: none;
@@ -57,16 +57,12 @@ label{
   cursor: pointer;
   font-size: 16px;
   overflow: hidden;
-  background-color: #45579B;
 }
 .nav_item:nth-child(2n){
   background: #E0F1F8
 
 }
 .nav_item:nth-child(2n+1){
-  background: #CFECF4
-}
-.nav_item:first-child{
   background: #CFECF4
 }
 .nav_item:hover{

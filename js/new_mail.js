@@ -1,6 +1,3 @@
-//criação código Js
-// para novos e-mail -> xml -> 
-//sendo enviado para a o local dos enviados  (?)
 
 $(document).ready(function(){
 
