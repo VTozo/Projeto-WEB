@@ -3,14 +3,26 @@ $(document).ready(function(){
 	// Listagem de emails
 	$.ajax({
 		url: "../php/listar_mensagens.php",
+		dataType: "json",
 		success: function(result){
-        	$("#mails").html(result);
+        	
+        	for (var i = result.length - 1; i >= 0; i--) {
+        		
+        		$("#mails").append(
+        			'<div class="mail">'+
+        				'<div class="remetente">'+result[i].remetente+'</div>'+
+        				'<div class="assunto">'+result[i].assunto+'</div>'+
+        				'<div class="conteudo">'+result[i].conteudo+'</div>'+
+        			'</div>'
+        		);
+
+        	}
     	}
 	});
 	
 
 	// Visualização de email
-	$(".mail").click(function(){
+	$("#mails").on('click', '.mail',function(){
 		$("#mails").hide();
 		$("#mail .assunto").html($(this).children(".assunto").html());
 		$("#mail .remetente").html($(this).children(".remetente").html());
