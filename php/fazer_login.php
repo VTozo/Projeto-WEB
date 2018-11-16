@@ -4,7 +4,7 @@
 
 	$login_aprovado = FALSE;
 
-	$xml = simplexml_load_file("arquivos/usuarios/usuarios.xml");
+	$xml = simplexml_load_file("../arquivos/usuarios/usuarios.xml");
 
 	foreach ($xml->usuario as $usuario){
 	 	if ($usuario->email == $email and $usuario->senha == $senha) $login_aprovado = TRUE;
