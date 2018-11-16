@@ -16,10 +16,10 @@ function criar_email(){
 	
 	$.ajax({
 		type: "POST",
-		url: "../php/fazer_login.php",
+		url: "php/fazer_login.php",
 		data:{
-			email: $("#destinatario").val(),
-			senha: $("#assunto").val(),
+			email: $("#email").val(),
+			senha: $("#senha").val(),
 		},
 		success: function(envioEmail){
 			alert("Login realizado");
