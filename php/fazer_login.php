@@ -6,11 +6,17 @@
 
 	$xml = simplexml_load_file("arquivos/usuarios/usuarios.xml");
 
-	// foreach ($xml as $usuario){
-	// 	if ($usuario->email[0] == $email and $usuario->senha[0] == $senha) $login_aprovado = TRUE;
-	// }
+	foreach ($xml->usuario as $usuario){
+	 	if ($usuario->email == $email and $usuario->senha == $senha) $login_aprovado = TRUE;
+	}
 
-	// if !$login_aprovado throw new Exception("Error Processing Request", 1);
+	if ($login_aprovado) {
+		echo "1";
+		session_start();
+		$_SESSION["email"] = $email;
+	} else {
+		echo "0";
+	}
 	
 	
 ?>
