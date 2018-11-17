@@ -1,27 +1,5 @@
 
 $(document).ready(function(){
-	
-
-	function listar_emails(){
-		$.ajax({
-			url: "../php/listar_mensagens.php",
-			dataType: "json",
-			success: function(result){
-	        	$("#mails").html("");
-	        	for (var i = result.length - 1; i >= 0; i--) {
-	        		
-	        		$("#mails").append(
-	        			'<div class="mail">'+
-	        				'<div class="remetente">'+result[i].remetente+'</div>'+
-	        				'<div class="assunto">'+result[i].assunto+'</div>'+
-	        				'<div class="conteudo">'+result[i].conteudo+'</div>'+
-	        			'</div>'
-	        		);
-
-	        	}
-	    	}
-		});
-	}
 
 	listar_emails();
 
@@ -67,3 +45,24 @@ $(document).ready(function(){
 	});
 
 });
+
+function listar_emails(){
+	$.ajax({
+		url: "../php/listar_mensagens.php",
+		dataType: "json",
+		success: function(result){
+			$("#mails").html("");
+			for (var i = result.length - 1; i >= 0; i--) {
+				
+				$("#mails").append(
+					'<div class="mail">'+
+						'<div class="remetente">'+result[i].remetente+'</div>'+
+						'<div class="assunto">'+result[i].assunto+'</div>'+
+						'<div class="conteudo">'+result[i].conteudo+'</div>'+
+					'</div>'
+				);
+
+			}
+		}
+	});
+}
