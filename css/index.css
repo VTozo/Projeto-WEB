@@ -1,52 +1,58 @@
-*{
-	box-sizing: border-box;
-	margin: 0;
-}
-html, body, .flex-container{
-	height: 100%
-}
-body{
-	background: #eee;
-}
-input{
-	display: block;
-	margin: 0 0 7px 0;
-	padding: 5px;
-	border-radius: 2px;
-	border: 1px solid #AAA;
-	width: 260px;
-	height: 35px;
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-input[type=button]{
-	color: white;
+html, body, .flex-container {
+    height: 100%
+}
+
+body {
+    background: #eee;
+}
+
+input {
+    display: block;
+    margin: 0 0 7px 0;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #AAA;
+    width: 260px;
+    height: 35px;
+}
+
+input[type=button] {
+    color: white;
     background-color: #428bca;
     border-color: #357ebd;
-	margin-top: 30px;
-	padding: 12px;
-	height: auto;
-	cursor: pointer;
-	border-radius: 6px;
-	outline: none;
-}
-input[type=button]:hover{
-	background: #2069a8;
-}
-#formulario{
-	max-width: 380px;
-	padding: 35px;
-	margin: 0 auto;
-	background-color: #fff;
-	border: 1px solid rgba(0,0,0,0.1); 
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 30px;
+    padding: 12px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
 }
 
-.flex-container{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+input[type=button]:hover {
+    background: #2069a8;
 }
-h1{
-	margin-bottom: 30px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+#formulario {
+    max-width: 380px;
+    padding: 35px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
