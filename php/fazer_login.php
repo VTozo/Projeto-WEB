@@ -1,20 +1,20 @@
 <?php
-	$login_aprovado = FALSE;
+$login_aprovado = FALSE;
 
-	$email = $_POST["email"];
-	$senha = $_POST["senha"];
+$email = $_POST["email"];
+$senha = $_POST["senha"];
 
-	$xml = simplexml_load_file("../arquivos/usuarios/usuarios.xml");
+$xml = simplexml_load_file("../arquivos/usuarios/usuarios.xml");
 
-	foreach ($xml->usuario as $usuario){
-	 	if ($usuario->email == $email and $usuario->senha == $senha) $login_aprovado = TRUE;
-	}
+foreach ($xml->usuario as $usuario) {
+    if ($usuario->email == $email and $usuario->senha == $senha) $login_aprovado = TRUE;
+}
 
-	if ($login_aprovado) {
-		echo TRUE;
-		session_start();
-		$_SESSION["email"] = $email;
-	} else {
-		echo FALSE;
-	}
+if ($login_aprovado) {
+    echo TRUE;
+    session_start();
+    $_SESSION["email"] = $email;
+} else {
+    echo FALSE;
+}
 ?>
