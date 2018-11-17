@@ -2,7 +2,9 @@
 	$id = uniqid();
 	// Gera um id único pro email, para dar pra excluir e para guardar em arquivos diferentes
 
-	$remetente    = "email@gmail.com"; // MUDAR QUANDO TIVER A SESSAO (LOGIN)
+	session_start();
+
+	$remetente    = $_SESSION["email"];
 	$destinatario = $_POST["destinatario"];
 	$assunto      = $_POST["assunto"];
 	$conteudo     = $_POST["conteudo"];
@@ -25,6 +27,4 @@
 	$xml->appendChild($tag_email_enviado);
 
 	$xml->save("../arquivos/emails/email_".$id.".xml");
-
-	echo "email enviado"
 ?>
