@@ -36,7 +36,6 @@ $(document).ready(function () {
             $("#mails")    .show();
         }
     });
-
     // Barra de pesquisa
     $("input[type=search]").on("change paste keyup", function () {
         $('.mail:contains("'      + $(this).val() + '")') .show();
@@ -62,4 +61,9 @@ function listar_emails() {
             }
         }
     });
+}
+function listar_email_enviados(){
+	$.ajax({
+		url:"..."
+	})
 }
