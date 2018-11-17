@@ -1,10 +1,10 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
 
 	listar_emails();
 
 	// Visualização de email
-	$("#mails").on('click', '.mail',function(){
+	$("#mails").on('click', '.mail', function () {
 		$("#mails").hide();
 		$("#mail .assunto").html($(this).children(".assunto").html());
 		$("#mail .remetente").html($(this).children(".remetente").html());
@@ -12,13 +12,13 @@ $(document).ready(function(){
 		$("#mail").show();
 	});
 
-	$("#voltar_mails").click(function(){
+	$("#voltar_mails").click(function () {
 		$("#mail").hide();
 		$("#mails").show();
 	});
 
-	$("#nav_mensagem").click(function(){
-		if(!$(this).hasClass("ativo")){	
+	$("#nav_mensagem").click(function () {
+		if (!$(this).hasClass("ativo")) {
 			$("section").hide();
 			$(".nav_item").removeClass("ativo");
 			$("#nav_mensagem").addClass("ativo");
@@ -26,11 +26,11 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#nav_mails").click(function(){
+	$("#nav_mails").click(function () {
 
 		listar_emails();
 
-		if(!$(this).hasClass("ativo")){				
+		if (!$(this).hasClass("ativo")) {
 			$("section").hide();
 			$(".nav_item").removeClass("ativo");
 			$("#nav_mails").addClass("ativo");
@@ -39,29 +39,28 @@ $(document).ready(function(){
 	});
 
 	// Barra de pesquisa
-	$("input[type=search]").on("change paste keyup", function() {
-		$('.mail:contains("'+$(this).val()+'")').show();
-		$('.mail:not(:contains("'+$(this).val()+'"))').hide();
+	$("input[type=search]").on("change paste keyup", function () {
+		$('.mail:contains("' + $(this).val() + '")').show();
+		$('.mail:not(:contains("' + $(this).val() + '"))').hide();
 	});
 
 });
 
-function listar_emails(){
+function listar_emails() {
 	$.ajax({
 		url: "../php/listar_mensagens.php",
 		dataType: "json",
-		success: function(result){
+		success: function (result) {
 			$("#mails").html("");
 			for (var i = result.length - 1; i >= 0; i--) {
-				
+
 				$("#mails").append(
-					'<div class="mail">'+
-						'<div class="remetente">'+result[i].remetente+'</div>'+
-						'<div class="assunto">'+result[i].assunto+'</div>'+
-						'<div class="conteudo">'+result[i].conteudo+'</div>'+
+					'<div class="mail">' +
+					'<div class="remetente">' + result[i].remetente + '</div>' +
+					'<div class="assunto">' + result[i].assunto + '</div>' +
+					'<div class="conteudo">' + result[i].conteudo + '</div>' +
 					'</div>'
 				);
-
 			}
 		}
 	});

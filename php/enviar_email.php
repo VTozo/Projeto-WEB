@@ -8,19 +8,21 @@
 	$conteudo     = $_POST["conteudo"];
 
 	$xml = new DOMDocument("1.0");
-	$tag_emailEnviado = $xml->createElement("email");
-	$tag_destinatario = $xml->createElement("destinatario", $destinatario);
-	$tag_remetente= $xml->createElement("remetente", $remetente);
-	$tag_assunto = $xml->createElement("assunto", $assunto);
-	$tag_conteudo = $xml->createElement("conteudo", $conteudo);
-	$tag_id = $xml->createElement("id", $id);
 
-	$tag_emailEnviado->appendChild($tag_conteudo);
-	$tag_emailEnviado->appendChild($tag_id);
-	$tag_emailEnviado->appendChild($tag_assunto);
-	$tag_emailEnviado->appendChild($tag_destinatario);
-	$tag_emailEnviado->appendChild($tag_remetente);
-	$xml->appendChild($tag_emailEnviado);
+	$tag_email_enviado = $xml->createElement("email");
+	$tag_destinatario  = $xml->createElement("destinatario", $destinatario);
+	$tag_remetente     = $xml->createElement("remetente"   , $remetente);
+	$tag_assunto       = $xml->createElement("assunto"     , $assunto);
+	$tag_conteudo      = $xml->createElement("conteudo"    , $conteudo);
+	$tag_id            = $xml->createElement("id"          , $id);
+
+	$tag_email_enviado->appendChild($tag_conteudo);
+	$tag_email_enviado->appendChild($tag_id);
+	$tag_email_enviado->appendChild($tag_assunto);
+	$tag_email_enviado->appendChild($tag_destinatario);
+	$tag_email_enviado->appendChild($tag_remetente);
+
+	$xml->appendChild($tag_email_enviado);
 
 	$xml->save("../arquivos/emails/email_".$id.".xml");
 

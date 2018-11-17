@@ -1,29 +1,27 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-	$("#enviar_arquivo").click(function(){
+	$("#enviar_arquivo").click(function () {
 		criar_email();
 	})
 
 });
 
 
-function criar_email(){
-	
+function criar_email() {
 	$.ajax({
 		type: "POST",
 		url: "../php/enviar_email.php",
-		data:{
+		data: {
 			destinatario: $("#destinatario").val(),
 			assunto: $("#assunto").val(),
 			conteudo: $("#conteudo").val()
 		},
-		success: function(envioEmail){
+		success: function (envioEmail) {
 			alert("Email enviado!");
 		},
-		error: function(){
+		error: function () {
 			alert("Ocorreu um erro");
 		}
 	});
-
 }
