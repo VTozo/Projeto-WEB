@@ -1,8 +1,8 @@
 <?php
+	$login_aprovado = FALSE;
+
 	$email = $_POST["email"];
 	$senha = $_POST["senha"];
-
-	$login_aprovado = FALSE;
 
 	$xml = simplexml_load_file("../arquivos/usuarios/usuarios.xml");
 
@@ -11,12 +11,10 @@
 	}
 
 	if ($login_aprovado) {
-		echo "1";
+		echo TRUE;
 		session_start();
 		$_SESSION["email"] = $email;
 	} else {
-		echo "0";
+		echo FALSE;
 	}
-	
-	
 ?>

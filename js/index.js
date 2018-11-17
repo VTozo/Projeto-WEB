@@ -21,12 +21,15 @@ function criar_email(){
 			email: $("#email").val(),
 			senha: $("#senha").val(),
 		},
-		success: function(envioEmail){
-			alert("Login realizado");
-			
+		success: function(login_aprovado){
+			if (login_aprovado) {
+				alert('Login aprovado.')
+			} else {
+				alert('Email ou senha incorretos.')
+			}
 		},
 		error: function(){
-			alert("Não foi possível fazer login");
+			alert("Algum erro ocorreu. Não foi possível realizar login.");
 		}
 	});
 
