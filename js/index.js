@@ -23,7 +23,7 @@ function criar_email(){
 		},
 		success: function(login_aprovado){
 			if (login_aprovado) {
-				alert('Login aprovado.')
+				window.location.pathname = 'Projeto-WEB/paginas/inbox.html'
 			} else {
 				alert('Email ou senha incorretos.')
 			}
