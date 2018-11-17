@@ -8,4 +8,8 @@
 		<email>vlimatozo@gmail.com</email>
 		<senha>abc</senha>
 	</usuario>
+	<usuario>
+		<email>cfeld@gmail.com</email>
+		<senha>abc</senha>
+	</usuario>
 </usuarios>
