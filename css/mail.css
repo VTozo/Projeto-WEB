@@ -109,7 +109,7 @@ label {
 
 #mails .assunto {
     width: 180px;
-    max-width: 20%;
+    max-width: 40%;
     display: inline-block;
     overflow: hidden;
 }
@@ -201,7 +201,7 @@ textarea {
 
 #mail .conteudo {
     margin: 30px;
-    white-space: pre;
+    white-space: pre-wrap;
     max-width: 100%;
     width: 700px;
     overflow: auto;
@@ -223,7 +223,7 @@ textarea {
     background: #2069a8;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #div_pesquisa {
         height: 100px;
         padding: 10px;

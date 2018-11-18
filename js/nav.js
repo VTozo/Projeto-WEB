@@ -17,7 +17,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         var viewportWidth = $(window).width();
 
-        if (viewportWidth > 600) {
+        if (viewportWidth > 700) {
             $("nav")      .css({width: "260px"}, 500);
             $(".nav_item").css({width: "100%" }, 500);
             $(".ativo")   .css({width: "270px"}, 500);

@@ -17,6 +17,7 @@ function criar_email() {
         },
         success: function () {
             alert("Email enviado!");
+            $("#destinatario, #assunto, #conteudo").val("");
         },
         error: function () {
             alert("Ocorreu um erro");

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<email>
-	<id>2</id>
-	<destinatario>dest_2</destinatario>
-	<remetente>rem_2@gmail.com</remetente>
-	<copia>copia_2</copia>
-	<assunto>Assunto 2</assunto>
-	<conteudo>Suspendisse ac ultrices nibh. Praesent ut facilisis ante. Aliquam in commodo tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</conteudo>
-</email>

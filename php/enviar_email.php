@@ -10,6 +10,7 @@ $assunto      = $_POST["assunto"];
 $conteudo     = $_POST["conteudo"];
 
 $xml = new DOMDocument("1.0");
+$xml->formatOutput = true;
 
 $tag_email_enviado = $xml->createElement("email");
 $tag_destinatario  = $xml->createElement("destinatario", $destinatario);
