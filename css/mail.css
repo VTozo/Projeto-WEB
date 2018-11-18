@@ -88,7 +88,7 @@ label {
     background: #56B0E4 !important;
     border-radius: 0 10px 10px 0;
     color: white;
-    width: 270px !important;
+    width: 270px;
     cursor: default;
 }
 
@@ -219,8 +219,21 @@ textarea {
     width: 100px;
 }
 
-#mail input[type=button]:hover {
-    background: #2069a8;
+#mail input[type=button]:hover, .excluir:hover {
+    background-color: #2069a8;
+}
+
+.excluir{
+    display: inline-block;
+    float: right;
+    height: 21px;
+    width: 21px;color: white;
+    background-color: #428bca;
+    border-color: #357ebd;cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    background-image: url(../imagens/delete.png);
+    background-size: cover;
 }
 
 @media (max-width: 700px) {

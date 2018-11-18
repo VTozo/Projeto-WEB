@@ -1,4 +1,8 @@
 <?php
-$arquivo = "email_2.xml";
-@rename("../arquivos/emails/" . $arquivo, "../arquivos/emails_excluidos/" . $arquivo);
+
+$id = $_POST["id"];
+@rename(
+	"../arquivos/emails/email_" . $id.".xml",
+	"../arquivos/emails_excluidos/email_" . $id.".xml"
+);
 ?>

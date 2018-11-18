@@ -43,6 +43,12 @@ $(document).ready(function () {
         $('.mail:not(:contains("' + $(this).val() + '"))').hide();
     });
 
+    // Exclusão de email
+    $("#mails").on('click', '.excluir', function (e) {
+        excluir_email($(this).val());
+        e.stopPropagation();
+    });
+
 });
 
 function listar_emails() {
@@ -57,6 +63,7 @@ function listar_emails() {
                     '<div class="remetente">' + result[i].remetente + '</div>' +
                     '<div class="assunto">'   + result[i].assunto   + '</div>' +
                     '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
+                    '<button class="excluir" title="Excluir" value="'+result[i].id+'"></button>' +
                     '</div>'
                 );
             }
@@ -83,6 +90,19 @@ function verificar_sessao() {
         },
         error: function () {
             alert("Algum erro ocorreu. Não foi possível verificar a sessão.");
+        }
+    });
+}
+
+function excluir_email(id) {
+    $.ajax({
+        url: "../php/excluir_email.php",
+        type: "POST",
+        data: {
+            id: id
+        },
+        success: function (result) {
+            listar_emails();
         }
     });
 }
