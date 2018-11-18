@@ -1,6 +1,6 @@
 <?php
 //emails
-$emails = file_get_contents("../arquivos/emails/");
+$emails = "../arquivos/emails/";
 $diretorio = dir($emails);
 $array = array();
 
