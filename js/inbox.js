@@ -63,6 +63,7 @@ function listar_emails() {
         }
     });
 }
+
 //function listar_email_enviados(){
 //	$.ajax({
 //		url:"../php/listar_enviados.php",
@@ -81,7 +82,7 @@ function verificar_sessao() {
             }
         },
         error: function () {
-            alert("Algum erro ocorreu. Não foi verificar a sessão.");
+            alert("Algum erro ocorreu. Não foi possível verificar a sessão.");
         }
     });
 }

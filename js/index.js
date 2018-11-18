@@ -38,7 +38,7 @@ function verificar_sessao() {
             }
         },
         error: function () {
-            alert("Algum erro ocorreu. Não foi verificar a sessão.");
+            alert("Algum erro ocorreu. Não foi possível verificar a sessão.");
         }
     });
 }
