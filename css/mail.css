@@ -100,21 +100,21 @@ label {
     font-size: 15px;
 }
 
-#mails .remetente {
+#mails .remetente, #excluidos .remetente {
     width: 220px;
     max-width: 35%;
     display: inline-block;
     overflow: hidden;
 }
 
-#mails .assunto {
+#mails .assunto, #excluidos .assunto  {
     width: 180px;
     max-width: 40%;
     display: inline-block;
     overflow: hidden;
 }
 
-#mails .conteudo {
+#mails .conteudo, #excluidos .conteudo  {
     max-width: 100%;
     display: inline-block;
     overflow: hidden;
@@ -126,7 +126,7 @@ label {
     border-bottom: 1px solid #3690C4;
 }
 
-#mails, #mail {
+#mails, #mail, #excluidos {
     overflow-y: auto;
     height: 100%;
     padding: 15px 35px;
@@ -223,7 +223,7 @@ textarea {
     background-color: #2069a8;
 }
 
-.excluir{
+.excluir, .restaurar{
     display: inline-block;
     float: right;
     height: 21px;
@@ -232,7 +232,15 @@ textarea {
     border-color: #357ebd;cursor: pointer;
     border-radius: 6px;
     outline: none;
+}
+
+.excluir{ 
     background-image: url(../imagens/delete.png);
+    background-size: cover;
+}
+
+.restaurar{ 
+    background-image: url(../imagens/restore.png);
     background-size: cover;
 }
 
@@ -260,11 +268,13 @@ textarea {
         width: 0;
     }
 
-    #mails, #nova_mensagem, #mail {
+    #mails, #nova_mensagem, #mail, #excluidos {
         padding: 5px 5px 100px 5px;
     }
 
-    #mails .assunto, #mails .remetente, #mails .conteudo {
+    #mails .assunto, #mails .remetente, #mails .conteudo, 
+    #excluidos .assunto, #excluidos .remetente, #excluidos .conteudo 
+    {
         display: block;
         max-width: 100%;
     }

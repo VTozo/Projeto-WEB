@@ -17,6 +17,13 @@ $(document).ready(function () {
         $("#mails").show();
     });
 
+    $("#nav_excluidos").click(function () {
+        $("section") .hide();
+        $(".nav_item")     .removeClass("ativo");
+        $("#nav_excluidos") .addClass("ativo");
+        $("#excluidos").show();
+    });
+
     $("#nav_mensagem").click(function () {
         if (!$(this).hasClass("ativo")) {
             $("section")       .hide();
@@ -49,6 +56,12 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
+    // Restauração de email
+    $("#excluidos").on('click', '.restaurar', function (e) {
+        restaurar_email($(this).val());
+        e.stopPropagation();
+    });
+
 });
 
 function listar_emails() {
@@ -64,6 +77,24 @@ function listar_emails() {
                     '<div class="assunto">'   + result[i].assunto   + '</div>' +
                     '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
                     '<button class="excluir" title="Excluir" value="'+result[i].id+'"></button>' +
+                    '</div>'
+                );
+            }
+        }
+    });
+
+    $.ajax({
+        url: "../php/listar_excluidos.php",
+        dataType: "json",
+        success: function (result) {
+            $("#excluidos").html("");
+            for (var i = result.length - 1; i >= 0; i--) {
+                $("#excluidos").append(
+                    '<div class="mail">' +
+                    '<div class="remetente">' + result[i].remetente + '</div>' +
+                    '<div class="assunto">'   + result[i].assunto   + '</div>' +
+                    '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
+                    '<button class="restaurar" title="Restaurar" value="'+result[i].id+'"></button>' +
                     '</div>'
                 );
             }
@@ -97,6 +128,19 @@ function verificar_sessao() {
 function excluir_email(id) {
     $.ajax({
         url: "../php/excluir_email.php",
+        type: "POST",
+        data: {
+            id: id
+        },
+        success: function (result) {
+            listar_emails();
+        }
+    });
+}
+
+function restaurar_email(id) {
+    $.ajax({
+        url: "../php/restaurar_email.php",
         type: "POST",
         data: {
             id: id
