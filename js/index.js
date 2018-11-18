@@ -32,8 +32,8 @@ function criar_email() {
 function verificar_sessao() {
     $.ajax({
         url: "php/verificar_sessao.php",
-        success: function (sessao_inativa) {
-            if (!sessao_inativa) {
+        success: function (sessao_ativa) {
+            if (sessao_ativa) {
                 window.location.pathname = 'Projeto-WEB/paginas/inbox.html';
             }
         },
