@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    verificar_sessao()
     listar_emails();
 
     // Visualização de email
@@ -70,3 +71,17 @@ function listar_emails() {
 //           }
 //    });
 //}
+
+function verificar_sessao() {
+    $.ajax({
+        url: "../php/verificar_sessao.php",
+        success: function (sessao_inativa) {
+            if (sessao_inativa) {
+                window.location.pathname = 'Projeto-WEB/index.html';
+            }
+        },
+        error: function () {
+            alert("Algum erro ocorreu. Não foi verificar a sessão.");
+        }
+    });
+}
