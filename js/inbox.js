@@ -62,8 +62,11 @@ function listar_emails() {
         }
     });
 }
-function listar_email_enviados(){
-	$.ajax({
-		url:"..."
-	})
-}
+//function listar_email_enviados(){
+//	$.ajax({
+//		url:"../php/listar_enviados.php",
+//        dataType "json",
+//        sucess: function (enviados) {
+//           }
+//    });
+//}
