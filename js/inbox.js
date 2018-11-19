@@ -75,11 +75,11 @@ $(document).ready(function () {
         }
     });
 
-    $("#mails_envi").on('click', '.mail_envi', function () {
+    $("#mails_envi").on('click', '.mail', function () {
         $("#mails_envi").hide();
-        $("#mail_envi .assunto_envi"  ).html($(this).children(".assunto_envi")  .html());
-        $("#mail_envi .remetente_envi").html($(this).children(".remetente_envi").html());
-        $("#mail_envi .conteudo_envi" ).html($(this).children(".conteudo_envi") .html());
+        $("#mail_envi .assunto"  ).html($(this).children(".assunto")  .html());
+        $("#mail_envi .destinatario").html($(this).children(".destinatario").html());
+        $("#mail_envi .conteudo" ).html($(this).children(".conteudo") .html());
         $("#mail_envi").show();
     });
 
