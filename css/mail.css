@@ -108,14 +108,14 @@ label {
     overflow: hidden;
 }
 
-#mails .assunto, #excluidos .assunto, #mails_envi .assunto  {
+#mails .assunto, #excluidos .assunto, #mails_envi .assunto {
     width: 180px;
     max-width: 40%;
     display: inline-block;
     overflow: hidden;
 }
 
-#mails .conteudo, #excluidos .conteudo, #mails_envi .conteudo  {
+#mails .conteudo, #excluidos .conteudo, #mails_envi .conteudo {
     max-width: 100%;
     display: inline-block;
     overflow: hidden;
@@ -195,12 +195,12 @@ textarea {
     text-align: left;
 }
 
-#mail .assunto, #mail_envi .assunto  {
+#mail .assunto, #mail_envi .assunto {
     font-size: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#mail .conteudo, #mail_envi .conteudo  {
+#mail .conteudo, #mail_envi .conteudo {
     margin: 30px;
     white-space: pre-wrap;
     max-width: 100%;
@@ -220,27 +220,29 @@ textarea {
     width: 100px;
 }
 
-#mail input[type=button]:hover, .excluir:hover, .restaurar:hover, #mail_envi input[type=button]:hover{
+#mail input[type=button]:hover, .excluir:hover, .restaurar:hover, #mail_envi input[type=button]:hover {
     background-color: #2069a8;
 }
 
-.excluir, .restaurar{
+.excluir, .restaurar {
     display: inline-block;
     float: right;
     height: 21px;
-    width: 21px;color: white;
+    width: 21px;
+    color: white;
     background-color: #428bca;
-    border-color: #357ebd;cursor: pointer;
+    border-color: #357ebd;
+    cursor: pointer;
     border-radius: 6px;
     outline: none;
 }
 
-.excluir{ 
+.excluir {
     background-image: url(../imagens/delete.png);
     background-size: cover;
 }
 
-.restaurar{ 
+.restaurar {
     background-image: url(../imagens/restore.png);
     background-size: cover;
 }
@@ -273,10 +275,9 @@ textarea {
         padding: 5px 5px 100px 5px;
     }
 
-    #mails .assunto, #mails .remetente, #mails .conteudo, 
-    #excluidos .assunto, #excluidos .remetente, #excluidos .conteudo, 
-    #mails_envi .assunto, #mails_envi .destinatario, #mails_envi .conteudo
-    {
+    #mails .assunto, #mails .remetente, #mails .conteudo,
+    #excluidos .assunto, #excluidos .remetente, #excluidos .conteudo,
+    #mails_envi .assunto, #mails_envi .destinatario, #mails_envi .conteudo {
         display: block;
         max-width: 100%;
     }

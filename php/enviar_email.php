@@ -1,6 +1,5 @@
 <?php
 $id = uniqid();
-// Gera um id único pro email, para dar pra excluir e para guardar em arquivos diferentes
 
 session_start();
 

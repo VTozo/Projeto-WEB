@@ -6,11 +6,11 @@ $(document).ready(function () {
 
     // Visualização de email
     $("#mails").on('click', '.mail', function () {
-        $("#mails").hide();
+        $("#mails")          .hide();
         $("#mail .assunto")  .html($(this).children(".assunto")  .html());
         $("#mail .remetente").html($(this).children(".remetente").html());
         $("#mail .conteudo") .html($(this).children(".conteudo") .html());
-        $("#mail").show();
+        $("#mail")           .show();
     });
 
     $("#voltar_mails").click(function () {
@@ -19,10 +19,10 @@ $(document).ready(function () {
     });
 
     $("#nav_excluidos").click(function () {
-        $("section") .hide();
+        $("section")       .hide();
         $(".nav_item")     .removeClass("ativo");
-        $("#nav_excluidos") .addClass("ativo");
-        $("#excluidos").show();
+        $("#nav_excluidos").addClass("ativo");
+        $("#excluidos")    .show();
     });
 
     $("#nav_mensagem").click(function () {
@@ -69,23 +69,23 @@ $(document).ready(function () {
         listar_email_enviados();
 
         if (!$(this).hasClass("ativo")) {
-            $("section").hide();
-            $(".nav_item").removeClass("ativo");
+            $("section")    .hide();
+            $(".nav_item")  .removeClass("ativo");
             $("#nav_envios").addClass("ativo");
             $("#mails_envi").show();
         }
     });
 
     $("#mails_envi").on('click', '.mail', function () {
-        $("#mails_envi").hide();
-        $("#mail_envi .assunto"  ).html($(this).children(".assunto")  .html());
+        $("#mails_envi")             .hide();
+        $("#mail_envi .assunto"  )   .html($(this).children(".assunto")     .html());
         $("#mail_envi .destinatario").html($(this).children(".destinatario").html());
-        $("#mail_envi .conteudo" ).html($(this).children(".conteudo") .html());
-        $("#mail_envi").show();
+        $("#mail_envi .conteudo" )   .html($(this).children(".conteudo")    .html());
+        $("#mail_envi")              .show();
     });
 
     $("#voltar_mails_envi").click(function () {
-        $("#mail_envi").hide();
+        $("#mail_envi") .hide();
         $("#mails_envi").show();
     });
 
@@ -103,7 +103,7 @@ function listar_emails() {
                     '<div class="remetente">' + result[i].remetente + '</div>' +
                     '<div class="assunto">'   + result[i].assunto   + '</div>' +
                     '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
-                    '<button class="excluir" title="Excluir" value="'+result[i].id+'"></button>' +
+                    '<button class="excluir" title="Excluir" value="' + result[i].id + '"></button>' +
                     '</div>'
                 );
             }
@@ -166,8 +166,8 @@ function listar_email_enviados(){
                 $("#mails_envi").append(
                     '<div class="mail">' +
                     '<div class="destinatario">' + result[i].destinatario + '</div>' +
-                    '<div class="assunto">'   + result[i].assunto   + '</div>' +
-                    '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
+                    '<div class="assunto">'      + result[i].assunto      + '</div>' +
+                    '<div class="conteudo">'     + result[i].conteudo     + '</div>' +
                     '</div>'
                 );
             }
