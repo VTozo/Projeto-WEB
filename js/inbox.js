@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // Visualização de email
     $("#mails").on('click', '.mail', function () {
-        $("#mails")          .hide();
+        $("section")         .hide();
         $("#mail .assunto")  .html($(this).children(".assunto")  .html());
         $("#mail .remetente").html($(this).children(".remetente").html());
         $("#mail .conteudo") .html($(this).children(".conteudo") .html());
