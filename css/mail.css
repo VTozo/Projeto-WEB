@@ -100,21 +100,21 @@ label {
     font-size: 15px;
 }
 
-#mails .remetente, #excluidos .remetente {
+#mails .remetente, #excluidos .remetente, #mails_envi .destinatario {
     width: 220px;
     max-width: 35%;
     display: inline-block;
     overflow: hidden;
 }
 
-#mails .assunto, #excluidos .assunto  {
+#mails .assunto, #excluidos .assunto, #mails_envi .assunto  {
     width: 180px;
     max-width: 40%;
     display: inline-block;
     overflow: hidden;
 }
 
-#mails .conteudo, #excluidos .conteudo  {
+#mails .conteudo, #excluidos .conteudo, #mails_envi .conteudo  {
     max-width: 100%;
     display: inline-block;
     overflow: hidden;
@@ -126,7 +126,7 @@ label {
     border-bottom: 1px solid #3690C4;
 }
 
-#mails, #mail, #excluidos {
+#mails, #mail, #excluidos, #mails_envi {
     overflow-y: auto;
     height: 100%;
     padding: 15px 35px;
@@ -268,12 +268,13 @@ textarea {
         width: 0;
     }
 
-    #mails, #nova_mensagem, #mail, #excluidos {
+    #mails, #nova_mensagem, #mail, #excluidos, #mails_envi {
         padding: 5px 5px 100px 5px;
     }
 
     #mails .assunto, #mails .remetente, #mails .conteudo, 
-    #excluidos .assunto, #excluidos .remetente, #excluidos .conteudo 
+    #excluidos .assunto, #excluidos .remetente, #excluidos .conteudo, 
+    #mails_envi .assunto, #mails_envi .destinatario, #mails_envi .conteudo
     {
         display: block;
         max-width: 100%;

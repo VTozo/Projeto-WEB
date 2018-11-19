@@ -62,6 +62,32 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
+    //email - enviados:
+    $("#nav_envios").click(function () {
+
+        listar_email_enviados();
+
+        if (!$(this).hasClass("ativo")) {
+            $("section").hide();
+            $(".nav_item").removeClass("ativo");
+            $("#nav_envios").addClass("ativo");
+            $("#mails_envi").show();
+        }
+    });
+
+    $("#mails_envi").on('click', '.mail_envi', function () {
+        $("#mails_envi").hide();
+        $("#mail_envi .assunto_envi"  ).html($(this).children(".assunto_envi")  .html());
+        $("#mail_envi .remetente_envi").html($(this).children(".remetente_envi").html());
+        $("#mail_envi .conteudo_envi" ).html($(this).children(".conteudo_envi") .html());
+        $("#mail_envi").show();
+    });
+
+    $("#voltar_mails_envi").click(function () {
+        $("#mail_envi").hide();
+        $("#mails_envi").show();
+    });
+
 });
 
 function listar_emails() {
@@ -102,15 +128,6 @@ function listar_emails() {
     });
 }
 
-//function listar_email_enviados(){
-//	$.ajax({
-//		url:"../php/listar_enviados.php",
-//        dataType "json",
-//        sucess: function (enviados) {
-//           }
-//    });
-//}
-
 function verificar_sessao() {
     $.ajax({
         url: "../php/verificar_sessao.php",
@@ -134,6 +151,25 @@ function excluir_email(id) {
         },
         success: function (result) {
             listar_emails();
+        }
+    });
+}
+
+function listar_email_enviados(){
+    $.ajax({
+        url: "../php/listar_enviados.php",
+        dataType: "json",
+        success: function (result) {
+            $("#mails_envi").html("");
+            for (var i = result.length - 1; i >= 0; i--) {
+                $("#mails_envi").append(
+                    '<div class="mail">' +
+                    '<div class="destinatario">' + result[i].destinatario + '</div>' +
+                    '<div class="assunto">'   + result[i].assunto   + '</div>' +
+                    '<div class="conteudo">'  + result[i].conteudo  + '</div>' +
+                    '</div>'
+                );
+            }
         }
     });
 }
