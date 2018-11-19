@@ -1,6 +1,7 @@
+verificar_sessao();
+
 $(document).ready(function () {
 
-    verificar_sessao()
     listar_emails();
 
     // Visualização de email

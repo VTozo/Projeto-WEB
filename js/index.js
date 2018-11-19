@@ -1,6 +1,6 @@
-$(document).ready(function () {
+verificar_sessao();
 
-    verificar_sessao();
+$(document).ready(function () {
 
     $("#entrar").click(function () {
         criar_email();
