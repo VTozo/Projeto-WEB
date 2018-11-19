@@ -126,7 +126,7 @@ label {
     border-bottom: 1px solid #3690C4;
 }
 
-#mails, #mail, #excluidos, #mails_envi {
+#mails, #mail, #excluidos, #mails_envi, #mail_envi {
     overflow-y: auto;
     height: 100%;
     padding: 15px 35px;
