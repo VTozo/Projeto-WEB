@@ -28,7 +28,7 @@ $(document).ready(function () {
     $("#nav_mensagem").click(function () {
         if (!$(this).hasClass("ativo")) {
             $("section")       .hide();
-            $(".nav_item")     .removeClass("ativo");
+            $(".nav_item").removeClass("ativo");
             $("#nav_mensagem") .addClass("ativo");
             $("#nova_mensagem").show();
         }
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         if (!$(this).hasClass("ativo")) {
             $("section")   .hide();
-            $(".nav_item") .removeClass("ativo");
+            $(".nav_item").removeClass("ativo");
             $("#nav_mails").addClass("ativo");
             $("#mails")    .show();
         }
@@ -70,7 +70,7 @@ $(document).ready(function () {
 
         if (!$(this).hasClass("ativo")) {
             $("section")    .hide();
-            $(".nav_item")  .removeClass("ativo");
+            $(".nav_item").removeClass("ativo");
             $("#nav_envios").addClass("ativo");
             $("#mails_envi").show();
         }
